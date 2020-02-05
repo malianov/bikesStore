@@ -145,47 +145,46 @@ public class MainPage {
 
                         System.out.println("You are going to find the first item of a particular brand (and additional parameters, if required).\n" +
                                 "Please, enter the brand you are looking for: ");
-
-                        String brandNameForFind = userScannerInput.next();
+                        userScannerInput.nextLine();
+                        String brandNameForFind = userScannerInput.nextLine();
 
                         Optional<Bike> firstBikeBasedOnSearch;
 
+                        System.out.println("brandNameForFind = " + brandNameForFind);
 
                         // The feature below not complete. I go to sleep.
-/*
-                        System.out.println("Are you going to add additional parameters for search? (y/n)");
-                        if (userScannerInput.next() == "n") {
-                            firstBikeBasedOnSearch =
-                                    bikesCatalog.stream()
-                                            .filter(x -> x.getBrand().equals(brandNameForFind))
-                                            .findFirst();
-                        } else {
-                            if(brandNameForFind.startsWith(Vendor.FOLDING_BIKE.getName())) {
-                                String[] filter = new String[]{"wheelsSize", "gearsQuantity", "weight", "isLightsInstalled", "color", "price"};
-                                for(String searchValue : filter) {
-                                    System.out.println("Put the value for search (or leave the blank): " + searchValue);
-                                    if(userScannerInput.hasNext()) {
-                                        value = userScannerInput.next();
-                                        values.put(searchValue, value);
-                                    }
-                                }
-                                System.out.println("values = " + values);
-                            }
-                            if(brandNameForFind.startsWith(Vendor.SPEEDELEC.getName())) {
-                                String[] filter = new String[]{"maxSpeed", "weight", "isLightsInstalled", "batteryCapacity", "color", "price"};
-                            }
-                            if(brandNameForFind.startsWith(Vendor.E_BIKE.getName())) {
-                                String[] filter = new String[]{"maxSpeed", "weight", "isLightsInstalled", "batteryCapacity", "color", "price"};
-                            }
-                            firstBikeBasedOnSearch = null;
-                        }
-*/
+//                        System.out.println("Are you going to add additional parameters for search? (y/n)");
+//                        if (userScannerInput.next() == "n") {
+                        firstBikeBasedOnSearch =
+                                bikesCatalog.stream()
+                                        .filter(x -> x.getBrand().equals(brandNameForFind))
+                                        .findFirst();
+//                        } else {
+//                            if(brandNameForFind.startsWith(Vendor.FOLDING_BIKE.getName())) {
+//                                String[] filter = new String[]{"wheelsSize", "gearsQuantity", "weight", "isLightsInstalled", "color", "price"};
+//                                for(String searchValue : filter) {
+//                                    System.out.println("Put the value for search (or leave the blank): " + searchValue);
+//                                    if(userScannerInput.hasNext()) {
+//                                        value = userScannerInput.next();
+//                                        values.put(searchValue, value);
+//                                    }
+//                                }
+//                                System.out.println("values = " + values);
+//                            }
+//                            if(brandNameForFind.startsWith(Vendor.SPEEDELEC.getName())) {
+//                                String[] filter = new String[]{"maxSpeed", "weight", "isLightsInstalled", "batteryCapacity", "color", "price"};
+//                            }
+//                            if(brandNameForFind.startsWith(Vendor.E_BIKE.getName())) {
+//                                String[] filter = new String[]{"maxSpeed", "weight", "isLightsInstalled", "batteryCapacity", "color", "price"};
+//                            }
+//                            firstBikeBasedOnSearch = null;
+                        //                       }
 
-/*                        if (firstBikeBasedOnSearch.isPresent()) {
-                            System.out.println(firstBikeBasedOnSearch.get().printFromCatalog());
-                        } else {
-                            System.out.println("Such Bike doesn't exist inside catalog");
-                        }*/
+//                        if (firstBikeBasedOnSearch.isPresent()) {
+                        System.out.println(firstBikeBasedOnSearch.get().printFromCatalog());
+//                        } else {
+//                            System.out.println("Such Bike doesn't exist inside catalog");
+//                        }
 
 
                         break;
