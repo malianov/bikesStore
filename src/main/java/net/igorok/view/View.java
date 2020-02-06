@@ -2,29 +2,31 @@ package net.igorok.view;
 
 import net.igorok.domain.entity.Bike;
 
+import java.nio.file.Paths;
+
 public class View {
     public void showMainMenu() {
         System.out.println(
                 "╔═══════════════════════════════════════════════╗\n" +
-                        "║           Please make your choice:            ║\n" +
-                        "╟╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╢\n" +
-                        "║ 1 - Show the entire EcoBike catalog           ║\n" +
-                        "║ 2 – Add a new folding bike                    ║\n" +
-                        "║ 3 – Add a new speedelec                       ║\n" +
-                        "║ 4 – Add a new e-bike                          ║\n" +
-                        "║ 5 – Find the first item of a particular brand ║\n" +
-                        "║ 6 – Write to file                             ║\n" +
-                        "║ 7 – Stop the program                          ║\n" +
-                        "╚═══════════════════════════════════════════════╝\n" +
-                        "Enter from 1 to 7: ");
+                "║           Please make your choice:            ║\n" +
+                "╟╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╢\n" +
+                "║ 1 - Show the entire EcoBike catalog           ║\n" +
+                "║ 2 – Add a new folding bike                    ║\n" +
+                "║ 3 – Add a new speedelec                       ║\n" +
+                "║ 4 – Add a new e-bike                          ║\n" +
+                "║ 5 – Find the first item of a particular brand ║\n" +
+                "║ 6 – Write to file                             ║\n" +
+                "║ 7 – Stop the program                          ║\n" +
+                "╚═══════════════════════════════════════════════╝\n" +
+                "Enter from 1 to 7: ");
     }
 
     public void valueNotANumberButTheText(int maxMenuNumber) {
         System.out.println(
                 "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░\n" +
-                        "░  The entered value is not a number, but the text. ░\n" +
-                        "░    Please choose the right number from 1 to " + maxMenuNumber + "     ░\n" +
-                        "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░");
+                "░  The entered value is not a number, but the text. ░\n" +
+                "░    Please choose the right number from 1 to " + maxMenuNumber + "     ░\n" +
+                "░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░");
     }
 
     public void printBikeRowFromCatalog(int i, String string) {
@@ -32,41 +34,45 @@ public class View {
     }
 
     public void addFoldingBike() {
-        System.out.println("You are going to add a new Folding Bike. \nPlease, follow the instruction:");
+        System.out.println("You are going to add a new Folding Bike. \nPlease, follow the next instruction:");
     }
 
     public void addSpeedelecBike() {
-        System.out.println("You are going to add a new Speedelec Bike. \nPlease, follow the instruction:");
+        System.out.println("You are going to add a new Speedelec Bike. \nPlease, follow the next instruction:");
     }
 
     public void addEBike() {
-        System.out.println("You are going to add a new Speedelec Bike. \nPlease, follow the instruction:");
+        System.out.println("You are going to add a new EBike. \nPlease, follow the next instruction:");
     }
 
     public void setBrand() {
-        System.out.println("A brand");
+        System.out.println("Please, enter a brand");
     }
     public void setMaxSpeed() {
-        System.out.println("A maximum speed");
+        System.out.println("Please, enter a maximum speed");
     }
     public void setBatteryCapacity() {
-        System.out.println("A battery capacity");
+        System.out.println("Please, enter a battery capacity");
     }
 
     public void setWheelsSize() {
-        System.out.println("The size of the wheels (in inch)");
+        System.out.println("Please, enter the size of the wheels (in inch)");
     }
 
     public void setGearsNumbere() {
-        System.out.println("The number of gears");
+        System.out.println("Please, enter the number of gears");
     }
 
     public void setWeight() {
-        System.out.println("The weight of the bike (in grams)");
+        System.out.println("Please, enter the weight of the bike (in grams)");
     }
 
     public void setLightsAvailability() {
-        System.out.println("The availability of lights at front and back (true/false)");
+        System.out.println("Please, enter the availability of lights at front and back (true/false)");
+    }
+
+    public void showThePathWhereSavedFileIs(String inputFile) {
+        Paths.get(inputFile).toAbsolutePath().toString();
     }
 
     public void setColor() {

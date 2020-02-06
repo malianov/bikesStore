@@ -25,17 +25,9 @@ public class Speedelec extends Bike {
         super();
     }
 
-//    public double getMaxSpeed() {
-//        return maxSpeed;
-//    }
-
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
-
-//    public int getBatteryCapacity() {
-//        return batteryCapacity;
-//    }
 
     public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;

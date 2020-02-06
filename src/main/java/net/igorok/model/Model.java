@@ -7,9 +7,11 @@ import net.igorok.domain.entity.Speedelec;
 import net.igorok.domain.valueobjects.Vendor;
 import net.igorok.view.View;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -28,18 +30,6 @@ public class Model {
     Optional<Bike> firstBikeBasedOnSearch;
 
     View view = new View();
-
-/*
-    private void addFoldingBike() {
-    }
-
-    private void addSpeedelec() {
-    }
-
-    private void EBike() {
-    }
-*/
-
 
     public String getInputFile() {
         return inputFile;
@@ -139,6 +129,7 @@ public class Model {
     public void saveFile() {
         try {
             Files.write(Path.of(inputFile), rawLinesInOriginalFile);
+            view.showThePathWhereSavedFileIs(inputFile);
             view.operationCompletesSuccessfully();
         } catch (IOException e) {
             e.printStackTrace();

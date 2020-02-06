@@ -16,10 +16,6 @@ public abstract class Bike {
         return catalogString();
     }
 
-/*    public void setFoldingBikeWheelsSize(int wheelsSize) {
-        setWheelsSize(wheelsSize);
-    }*/
-
     public void setFoldingBikeGearsQuantity(int gearsQuantity) {
         setGearsQty(gearsQuantity);
     }
@@ -57,30 +53,18 @@ public abstract class Bike {
         this.brand = brand;
     }
 
-//    public double getWeight() {
-//        return weight;
-//    }
     public void setWeight(int weight) {
         this.weight = weight;
     }
 
-//    public String getColor() {
-//        return color;
-//    }
     public void setColor(String color) {
         this.color = color;
     }
 
-//    public int getPrice() {
-//        return price;
-//    }
     public void setPrice(int price) {
         this.price = price;
     }
 
-//    public boolean isLightsInstalled() {
-//        return isLightsInstalled;
-//    }
     public String printIsLightsInstalled(boolean isLightsInstalled) {
         return isLightsInstalled ? "" : "no ";
     }
