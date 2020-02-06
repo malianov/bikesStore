@@ -4,6 +4,10 @@ public class EBike extends Bike {
     int maxSpeed;
     int batteryCapacity;
 
+    public EBike() {
+        super();
+    }
+
     @Override
     protected String createLine() {
         return getBrand() + "; " + maxSpeed + "; " + weight + ";" + isLightsInstalled + "; " + batteryCapacity + "; " + color + "; " + price;
@@ -15,9 +19,10 @@ public class EBike extends Bike {
     }
 
     @Override
-    protected void setWheelsSize(int wheelsSize) {
-        // Not used
+    public void setWheelsSize(int wheelsSize) {
+        //not used
     }
+
 
     @Override
     protected void setGearsQty(int gearsQuantity) {
@@ -29,11 +34,11 @@ public class EBike extends Bike {
         return brand;
     }
 
-    public EBike(String brand, int maxSpeed, int weight, boolean isLightsInstalled, int batteryCapacity, String colour, int price) {
-        super(brand, weight, colour, price, isLightsInstalled);
-        this.maxSpeed = maxSpeed;
-        this.batteryCapacity = batteryCapacity;
-    }
+//    public EBike(String brand, int maxSpeed, int weight, boolean isLightsInstalled, int batteryCapacity, String colour, int price) {
+//        super(brand, weight, colour, price, isLightsInstalled);
+//        this.maxSpeed = maxSpeed;
+//        this.batteryCapacity = batteryCapacity;
+//    }
 
     public EBike(String[] array) {
         super(array[0], Integer.parseInt(array[2]), array[5], Integer.parseInt(array[6]), Boolean.parseBoolean(array[3]));
@@ -41,17 +46,17 @@ public class EBike extends Bike {
         this.batteryCapacity = Integer.parseInt(array[4]);
     }
 
-    public double getMaxSpeed() {
-        return maxSpeed;
-    }
+//    public double getMaxSpeed() {
+//        return maxSpeed;
+//    }
 
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
-    public double getBatteryCapacity() {
-        return batteryCapacity;
-    }
+//    public double getBatteryCapacity() {
+//        return batteryCapacity;
+//    }
 
     public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;

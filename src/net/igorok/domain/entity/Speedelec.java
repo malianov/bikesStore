@@ -21,17 +21,21 @@ public class Speedelec extends Bike {
         this.batteryCapacity = Integer.parseInt(array[4]);
     }
 
-    public double getMaxSpeed() {
-        return maxSpeed;
+    public Speedelec() {
+        super();
     }
+
+//    public double getMaxSpeed() {
+//        return maxSpeed;
+//    }
 
     public void setMaxSpeed(int maxSpeed) {
         this.maxSpeed = maxSpeed;
     }
 
-    public int getBatteryCapacity() {
-        return batteryCapacity;
-    }
+//    public int getBatteryCapacity() {
+//        return batteryCapacity;
+//    }
 
     public void setBatteryCapacity(int batteryCapacity) {
         this.batteryCapacity = batteryCapacity;
@@ -42,7 +46,7 @@ public class Speedelec extends Bike {
     }
 
     @Override
-    protected void setWheelsSize(int wheelsSize) {
+    public void setWheelsSize(int wheelsSize) {
         // Not used
     }
 
